@@ -1,5 +1,7 @@
+import type { NextPage } from 'next'
 import Head from 'next/head'  
 import styles from '../styles/Home.module.css'
+import Header from "../components/Header"
 
 export default function Home() {
   return (
@@ -7,7 +9,21 @@ export default function Home() {
       <Head>
         <title>Adam's Portfolio</title>
       </Head>
-        <h1>Let build an awesome portfolio</h1>
+       
+       {/* Header */}
+        <Header />
+       {/* Hero */}
+
+       {/* About */}
+
+       {/* Experience */}
+
+       {/* Skills */}
+
+       {/* Projects */}
+
+       {/*  Contact Me */}
+
     </div>
   )
 }
