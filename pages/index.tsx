@@ -10,7 +10,8 @@ import ContactMe from '../components/ContactMe'
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
+     // check back here for scroll behavior control 
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
       <Head>
         <title>Adam's Portfolio</title>
       </Head>
