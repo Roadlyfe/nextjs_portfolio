@@ -40,7 +40,7 @@ export default function Header({ }: Props) {
                     bgColor='transparent'
                 />
             </motion.div>
-                
+
             <motion.div
                 initial={{
                     x: 500,
@@ -56,14 +56,17 @@ export default function Header({ }: Props) {
                 className='flex flex-row items-center text-gray-300 cursor-pointer'>
                 <SocialIcon
                     className='cursor-pointer'
+                    url='#contact'
                     network='email'
                     fgColor='gray'
                     bgColor='transparent'
-                    />
-                <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
+                />
+                <a href="#contact">
+                    <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
+                    </a>
 
             </motion.div>
-                
+
         </header>
     )
 }
