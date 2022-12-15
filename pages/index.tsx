@@ -42,11 +42,11 @@ const Home: NextPage = () => {
         <ContactMe />
       </section>
       <Link href='#hero'>
-      <footer className='sticky bottom-1 w-full cursor-pointer'>
+      <footer className='sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
           <img
             className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0'
-          src="https://scontent-sjc3-1.xx.fbcdn.net/v/t31.18172-8/30072846_10214156273634649_6995639784459986368_o.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=A-kV7kUVqsoAX_vLMOP&tn=LndM5tPVKDfZJ3-n&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBTDNi_Rv0lQE4tDmhRMbLz11CquCmxdedCKmq5qyrHDg&oe=639F805E" 
+          src="https://ak.picdn.net/shutterstock/videos/1072900160/thumb/1.jpg?ip=x480" 
           alt="A photo of me" 
           />
           </div>
