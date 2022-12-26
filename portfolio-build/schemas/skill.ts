@@ -29,7 +29,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'title',
       media: 'image',
     },
   },

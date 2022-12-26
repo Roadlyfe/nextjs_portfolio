@@ -14,12 +14,12 @@ export default defineType({
     defineField({
       name: 'url',
       title: 'Url',
-      type: 'number',
+      type: 'string',
     }),
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'title',
       media: 'image',
     },
   },
