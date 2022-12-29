@@ -16,3 +16,4 @@ export default defineConfig({
     types: schemaTypes,
   },
 })
+
