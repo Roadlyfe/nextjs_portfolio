@@ -14,7 +14,7 @@ const Home: NextPage = () => {
      // check back here for scroll behavior control 
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
       <Head>
-        <title>Adam's Portfolio</title>
+        <title>Adam&apos;s Portfolio</title>
       </Head>
 
       <Header />
@@ -44,11 +44,11 @@ const Home: NextPage = () => {
       <Link href='#hero'>
       <footer className='sticky bottom-1 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
-          <img
+          {/* <img
             className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0'
           src="https://scontent-sjc3-1.xx.fbcdn.net/v/t31.18172-8/30072846_10214156273634649_6995639784459986368_o.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=A-kV7kUVqsoAX_vLMOP&tn=LndM5tPVKDfZJ3-n&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBTDNi_Rv0lQE4tDmhRMbLz11CquCmxdedCKmq5qyrHDg&oe=639F805E" 
           alt="A photo of me" 
-          />
+          /> */}
           </div>
       </footer>
       </Link>
