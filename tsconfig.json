@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sanity/schemas/experience.js", "sanity/schemas/pageInfo.js", "sanity/schemas/project.js", "sanity/schemas/schema.js", "sanity/schemas/skill.js", "sanity/schemas/social.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sanity/schemas/experience.ts", "sanity/schemas/pageInfo.ts", "sanity/schemas/project.ts", "sanity/schemas/schema.ts", "sanity/schemas/skill.ts", "sanity/schemas/social.ts"],
   "exclude": ["node_modules"]
 }

@@ -2,14 +2,18 @@ import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles';
 import Link from 'next/link'
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-function Hero({ }: Props) {
+function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "Hi, my name is Adam Smith.",
+            "Hi, my blame is flipper.",
             "I-love-camping-and-exploring.tsx",
             "<ButILoveToCodeMore />",
         ],
@@ -21,11 +25,16 @@ function Hero({ }: Props) {
             <BackgroundCircles />
             <img
                 className='relative rounded-full h-32 w-32 mx-auto object-cover'
-                src="https://avatars.githubusercontent.com/u/91632531?v=4" alt='a picture of me from github' />
+                //this is where my heroImage should go but getting an error
+                src={urlFor(pageInfo?.profilePic).url()}
+                alt='a picture of me from github' />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
+                    
                     Software Engineer
+                 {/* Check the comments to fix this. Looks like a 403 */}
                 </h2>
+                
                 <h1 className='text-4xl lg:text-6xl font-semibold px-10'>
                     <span className='mr-3'>{text}</span>
                     <Cursor cursorColor='#F7AB0A' />

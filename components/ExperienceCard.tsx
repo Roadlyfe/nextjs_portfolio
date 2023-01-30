@@ -14,7 +14,10 @@ export default function ExperienceCard({ }: Props) {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }} 
                 viewport={{ once: true }}
-                className='w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center' src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/39141753_840240299514801_144373019257602048_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=84a396&_nc_ohc=8qgcrg2Pd5gAX8wWTXl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDlwmT5GTdL5LsqE8VF9NlTUJNPzBKPxC9ckPnJkYB_0Q&oe=63A34E2E" alt="a picture of me by a lake" />
+                className='w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center' 
+                // src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/39141753_840240299514801_144373019257602048_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=84a396&_nc_ohc=8qgcrg2Pd5gAX8wWTXl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDlwmT5GTdL5LsqE8VF9NlTUJNPzBKPxC9ckPnJkYB_0Q&oe=63A34E2E" 
+                // alt="a picture of me by a lake" 
+                />
             <div className='px-0 md:px-10'>
                 <h4 className='text-4xl font-light'>Job Title</h4>
                 <p className='font-bold text-2xl mt-1'>Company</p>
