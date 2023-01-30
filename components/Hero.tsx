@@ -13,7 +13,7 @@ type Props = {
 function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "Hi, my blame is flipper.",
+            `Hi, my name is ${pageInfo?.name}.`,
             "I-love-camping-and-exploring.tsx",
             "<ButILoveToCodeMore />",
         ],
@@ -30,8 +30,7 @@ function Hero({ pageInfo }: Props) {
                 alt='a picture of me from github' />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
-                    
-                    Software Engineer
+                    {pageInfo?.role}
                  {/* Check the comments to fix this. Looks like a 403 */}
                 </h2>
                 
