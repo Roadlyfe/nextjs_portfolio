@@ -32,7 +32,7 @@ export interface Technology extends SanityBody {
     title: string;
 }
 
-export interface Skill extends SanityBody {
+export interface SkillType extends SanityBody {
     _type: "skill";
     image: Image;
     progress: number;

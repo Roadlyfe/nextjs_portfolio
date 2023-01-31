@@ -21,7 +21,7 @@ export default defineType({
     },
     {
       name: "summary",
-      title: "Sumamry",
+      title: "Summary",
       type: "text",
     },
     {

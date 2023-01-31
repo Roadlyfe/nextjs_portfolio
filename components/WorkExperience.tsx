@@ -1,10 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import ExperienceCard from './ExperienceCard'
+import { Experience } from '../typings'
+import experience from '../sanity/schemas/experience'
 
-type Props = {}
+type Props = {
+  experiences: Experience[];
+}
 
-function WorkExperience({}: Props) {
+function WorkExperience({ experiences }: Props) {
   return (
     <motion.div 
     initial={{ opacity: 0 }}
@@ -15,10 +19,10 @@ function WorkExperience({}: Props) {
             Experience
         </h3>
         <div className='relative w-full  flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
+          {experiences?.map((experience) => (
+            <ExperienceCard key={experience._id} experience={experience} />
+          ))}
+          
         </div>
     </motion.div>
   )

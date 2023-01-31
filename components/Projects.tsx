@@ -2,22 +2,15 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { createClient } from "next-sanity";
 import { clientInfo } from "../sanity/schemas/schema"
+import { Project } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {}
-
-const sanityClient = createClient(clientInfo);
-
-async function getProjects() {
-    try {
-        let projects = await sanityClient.fetch(`*[_type == "project"]`);
-        return projects;
-    } catch(e) {
-        console.log(e)
-    }
+type Props = {
+    projects: Project[];
 }
 
-function Projects({ }: Props) {
-    const projects = getProjects();
+function Projects({ projects }: Props) {
+    
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -27,10 +20,9 @@ function Projects({ }: Props) {
             <h3 className='absolute top-2 uppercase tracking-[20px] text-gray-500 text-[2xl]'>
                 Projects
             </h3>
-
-            {/* <div className='relative w-full  flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
-                {projects.map((project, i) => (
-                    <div key={project} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
+            <div className='relative w-full  flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
+                {projects?.map((project, i) => (
+                    <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                         <motion.img
                             initial={{
                                 y: -300,
@@ -40,22 +32,34 @@ function Projects({ }: Props) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
 
-                            src="https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png"
+                            src={urlFor(project?.image).url()}
                             alt="picture of a netflix clone project"
                         />
                         <div className='space-y-10 px-0 max-w-6xl'>
                             <h4 className='text-4xl font-semibold text-center'>
                                 <span className='underline decoration-[#F7AB0A]/50'>
-                                    Case Study {i + 1} of {projects ? projects.length: null}:</span>
-                                UPS Clone
+                                    Case Study {i + 1} of {projects.length}: </span>
+                                {project?.title}
                             </h4>
+
+                            <div className='flex items-center space-x-2 justify-center'>
+                            {project?.technologies.map((technology) => (
+                                <img 
+                                className='h-10 w-10'
+                                key={technology._id}
+                                src={urlFor(technology.image).url()}
+                                alt=""
+                                />
+                            ))}
+                            </div>
+
                             <p className='text-lg text-center md:text-left'>
-                                Doggo ipsum floofs length boy porgo much ruin diet dat tungg tho, tungg dat tungg tho floofs. Sub woofer thicc fat boi shibe you are doin me a concern.
+                              {project?.summary }
                             </p>
                         </div>
                     </div>
                 ))}
-            </div> */}
+            </div>
             {/* changed stripe height to 400px from 500px */}
             <div className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[400px] -skew-y-12' />
         </motion.div>
@@ -63,3 +67,14 @@ function Projects({ }: Props) {
  }
 
 export default Projects
+
+// const sanityClient = createClient(clientInfo);
+
+// async function getProjects() {
+//     try {
+//         let projects = await sanityClient.fetch(`*[_type == "project"]`);
+//         return projects;
+//     } catch(e) {
+//         console.log(e)
+//     }
+// }

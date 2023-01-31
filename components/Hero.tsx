@@ -26,7 +26,7 @@ function Hero({ pageInfo }: Props) {
             <img
                 className='relative rounded-full h-32 w-32 mx-auto object-cover'
                 //this is where my heroImage should go but getting an error
-                src={urlFor(pageInfo?.profilePic).url()}
+                src={urlFor(pageInfo?.heroImage).url()}
                 alt='a picture of me from github' />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
