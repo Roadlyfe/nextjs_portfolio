@@ -11,7 +11,7 @@ interface Image {
         _ref: string;
         _type: "reference";
     };
-} 
+}
 
 export interface PageInfo extends SanityBody {
     _type: "pageInfo";
@@ -52,6 +52,7 @@ export interface Experience extends SanityBody {
 }
 
 export interface Project extends SanityBody {
+    summary: ReactNode;
     title: string;
     _type: "project";
     image: Image;

@@ -21,8 +21,8 @@ function Projects({ projects }: Props) {
                 Projects
             </h3>
             <div className='relative w-full  flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
-                {projects?.map((project, i) => (
-                    <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
+                {projects.map((project, i) => (
+                    <div key={project?._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                         <motion.img
                             initial={{
                                 y: -300,
@@ -31,7 +31,6 @@ function Projects({ projects }: Props) {
                             transition={{ duration: 1.2 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-
                             src={urlFor(project?.image).url()}
                             alt="picture of a netflix clone project"
                         />
@@ -54,7 +53,7 @@ function Projects({ projects }: Props) {
                             </div>
 
                             <p className='text-lg text-center md:text-left'>
-                              {project?.summary }
+                              {project?.summary}
                             </p>
                         </div>
                     </div>
@@ -68,13 +67,3 @@ function Projects({ projects }: Props) {
 
 export default Projects
 
-// const sanityClient = createClient(clientInfo);
-
-// async function getProjects() {
-//     try {
-//         let projects = await sanityClient.fetch(`*[_type == "project"]`);
-//         return projects;
-//     } catch(e) {
-//         console.log(e)
-//     }
-// }

@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'pageInfo',
@@ -49,10 +49,10 @@ export default defineType({
     {
       name: "address",
       title: "Address",
-      type: "string"      
+      type: "string"
     },
     {
-      name: "socials", 
+      name: "socials",
       title: "Socials",
       type: "array",
       of: [{ type: "reference", to: { type: "social" } }]
@@ -60,15 +60,3 @@ export default defineType({
   ],
 })
 
-
-  // preview: {
-  //   select: {
-  //     title: 'title',
-  //     author: 'author.name',
-  //     media: 'mainImage',
-  //   },
-  //   prepare(selection) {
-  //     const {author} = selection
-  //     return {...selection, subtitle: author && `by ${author}`}
-  //   },
-  // },

@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'skill',
@@ -29,14 +29,3 @@ export default defineType({
   ],
 })
 
- // preview: {
-  //   select: {
-  //     title: 'title',
-  //     author: 'author.name',
-  //     media: 'mainImage',
-  //   },
-  //   prepare(selection) {
-  //     const {author} = selection
-  //     return {...selection, subtitle: author && `by ${author}`}
-  //   },
-  // },

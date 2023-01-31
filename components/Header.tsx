@@ -29,16 +29,15 @@ export default function Header({ socials }: Props) {
                 {/* Social Icons */}
                 {socials.map((social) => (
                     <SocialIcon
-                    key={social._id}
-                    url={social.url}
-                    fgColor='gray'
-                    bgColor='transparent'
+                        key={social._id}
+                        url={social.url}
+                        fgColor='gray'
+                        bgColor='transparent'
                     />
-                    ))}
-                    
-                
+                ))}
             </motion.div>
-              <Link href="#contact"></Link>  
+
+            <Link href="#contact"></Link>
             <motion.div
                 initial={{
                     x: 500,
@@ -57,10 +56,11 @@ export default function Header({ socials }: Props) {
                     network='email'
                     fgColor='gray'
                     bgColor='transparent'
-                    />
+                />
                 <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
-            </motion.div>    
-        </header>    
+            </motion.div>
+            
+        </header>
     )
 }
 

@@ -2,8 +2,6 @@ import React from 'react';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 import { useForm, SubmitHandler } from "react-hook-form";
 
-
-
 type Inputs = {
     name: string;
     email: string;
@@ -35,19 +33,16 @@ function ContactMe({ }: Props) {
                 </h4>
                 <div className='space-y-5'>
                     <div className='flex items-center space-x-5 justify-center'>
-                        {/* come back here to try diff animations for phone icon */}
                         <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>503-975-6868</p>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
-                        {/* come back here to try diff animations for phone icon */}
                         <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
                         <p className='text-2xl'>adamsmithetc@gmail.com</p>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
-                        {/* come back here to try diff animations for phone icon */}
                         <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                        <p className='text-2xl'>503-975-6868</p>
+                        <p className='text-2xl'>Hood River, Oregon</p>
                     </div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>

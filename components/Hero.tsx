@@ -25,15 +25,13 @@ function Hero({ pageInfo }: Props) {
             <BackgroundCircles />
             <img
                 className='relative rounded-full h-32 w-32 mx-auto object-cover'
-                //this is where my heroImage should go but getting an error
                 src={urlFor(pageInfo?.heroImage).url()}
                 alt='a picture of me from github' />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
                     {pageInfo?.role}
-                 {/* Check the comments to fix this. Looks like a 403 */}
                 </h2>
-                
+
                 <h1 className='text-4xl lg:text-6xl font-semibold px-10'>
                     <span className='mr-3'>{text}</span>
                     <Cursor cursorColor='#F7AB0A' />
@@ -42,9 +40,9 @@ function Hero({ pageInfo }: Props) {
                     <Link href="#about">
                         <button className='heroButton'>About</button>
                     </Link>
-                    <Link href="#experience">
+                    {/* <Link href="#experience">
                         <button className='heroButton'>Experience</button>
-                    </Link>
+                    </Link> */}
                     <Link href="#skills">
                         <button className='heroButton'>Skills</button>
                     </Link>

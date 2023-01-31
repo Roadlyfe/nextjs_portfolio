@@ -16,38 +16,38 @@ export default function ExperienceCard({ experience }: Props) {
                     opacity: 0,
                 }}
                 transition={{ duration: 1.2 }}
-                whileInView={{ opacity: 1, y: 0 }} 
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className='w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center' 
+                className='w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
                 src={urlFor(experience?.companyImage).url()}
                 alt=""
-                />
+            />
             <div className='px-0 md:px-10'>
                 <h4 className='text-4xl font-light'>Job Title</h4>
                 <p className='font-bold text-2xl mt-1'>Company</p>
                 <div className='flex space-x-2 my-2'>
-                {experience.technologies.map((technology) => (
-                    <img
-                    key={technology._id}
-                    className='h-10 w-10 rounded-full'
-                    src={urlFor(technology.image).url()}
-                    />
-                  ) )}
-             </div>
+                    {experience.technologies.map((technology) => (
+                        <img
+                            key={technology._id}
+                            className='h-10 w-10 rounded-full'
+                            src={urlFor(technology.image).url()}
+                        />
+                    ))}
+                </div>
                 <p className='uppercase py-5 text-gray-300'>
                     {new Date(experience.dateStarted).toDateString()} -{" "}
                     {experience.isCurrentlyWorkingHere
-                    ? "Present"
-                    : new Date(experience.dateEnded).toDateString()}
+                        ? "Present"
+                        : new Date(experience.dateEnded).toDateString()}
                 </p>
                 <ul className='list-disc space-y-4 ml-5 text-lg ht-96 w-4/5 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80'>
-                {experience.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                ))}
+                    {experience.points.map((point, i) => (
+                        <li key={i}>{point}</li>
+                    ))}
                 </ul>
             </div>
         </article>
     )
 }
 
-//  experience card may become a testimonials section until I get some Experience
+//experienc card is not currently being rendered for obvious reasons. 
