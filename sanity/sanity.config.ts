@@ -1,6 +1,6 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
-import {visionTool} from '@sanity/vision'
+// import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas/schema'
 
 export default defineConfig({
@@ -10,7 +10,7 @@ export default defineConfig({
   projectId: 'h1ireiav',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool()],
 
   // tools: (prev) => {
   //   // 👇 Uses environment variables set by Vite in development mode
@@ -24,3 +24,5 @@ export default defineConfig({
     types: schemaTypes,
   },
 })
+
+//, visionTool()
