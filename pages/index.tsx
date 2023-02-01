@@ -14,6 +14,7 @@ import { fetchPageInfo } from '../utils/fetchPageInfo';
 import { fetchProjects } from '../utils/fetchProjects';
 import { fetchSkills } from '../utils/fetchSkills';
 import { fetchSocial } from '../utils/fetchSocials';
+// import { urlFor } from '../sanity';
 import { urlFor } from '../sanity';
 
 type Props = {
@@ -38,11 +39,11 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <Hero pageInfo={pageInfo} />
       </section>
       {/* About */}
-      <section id='about' className='snap-center'>
+      <section id='about' className='snap-start'>
         <About pageInfo={pageInfo} />
       </section>
       {/* Experience */}
-    <section id='experience' className='snap-center'>
+    <section id='experience' className='snap-start'>
       {/* <WorkExperience /> */}
       {/* Work experience section not being rendered */}
     </section>

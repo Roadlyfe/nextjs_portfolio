@@ -36,8 +36,7 @@ export default function Header({ socials }: Props) {
                     />
                 ))}
             </motion.div>
-
-            <Link href="#contact"></Link>
+ 
             <motion.div
                 initial={{
                     x: 500,
@@ -59,7 +58,7 @@ export default function Header({ socials }: Props) {
                 />
                 <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
             </motion.div>
-            
+
         </header>
     )
 }

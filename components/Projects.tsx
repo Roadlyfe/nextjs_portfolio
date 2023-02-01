@@ -20,9 +20,9 @@ function Projects({ projects }: Props) {
             <h3 className='absolute top-2 uppercase tracking-[20px] text-gray-500 text-[2xl]'>
                 Projects
             </h3>
-            <div className='relative w-full  flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
+            <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
                 {projects.map((project, i) => (
-                    <div key={project?._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
+                    <div key={project?._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-1 items-center justify-center mt-10 p-20 md:p-44 h-screen'>
                         <motion.img
                             initial={{
                                 y: -300,
@@ -51,10 +51,11 @@ function Projects({ projects }: Props) {
                                 />
                             ))}
                             </div>
-
-                            <p className='text-lg text-center md:text-left'>
+                            <div className=''>
+                            <p className='text-sm text-center pb-10'>
                               {project?.summary}
                             </p>
+                            </div>
                         </div>
                     </div>
                 ))}
